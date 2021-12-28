@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct DataListCellViewModel {
+    let titleText: String
+    let typeText: String
+    let yearText: String
+    let imageURL : String
+}

@@ -9,15 +9,17 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var yearLable: UILabel!
+    @IBOutlet weak var typeLable: UILabel!
+    @IBOutlet weak var titelLable: UILabel!
+    @IBOutlet weak var movieImage: UIImageView!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    public func configuration( titel : String , type : String , year : String , ImgaeURLString : String ) {
+       
+        yearLable.text = year
+        typeLable.text = type
+        titelLable.text = titel
+        FetchAndCashImage.fetchImageFromURL(UIImageView: movieImage, stringURL: ImgaeURLString )
     }
 
 }
